@@ -23,33 +23,22 @@
           <th scope="col">#</th>
           <th scope="col">Nombre</th>
           <th scope="col">Imagen</th>
+          <th scope="col">Tipo</th>
           <th scope="col">Ataque</th>
           <th scope="col">Defensa</th>
           <th scope="col">Acciones</th>
         </tr>
         </thead>
         <tbody>
-        <tr class="align-middle">
-          <th scope="row">409</th>
-          <td>Bulbasaur</td>
+        <tr *ngFor="let pokemon of pokemons" class="align-middle">
+          <th scope="row">{{ pokemon.id | number}}</th>
+          <td>{{ pokemon.name }}</td>
           <td>
-            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png" alt="" width="70" height="70px">
+            <img src="{{ pokemon.image }}" alt="{{ pokemon.name }}" width="70px" height="70px">
           </td>
-          <td>48</td>
-          <td>53</td>
-          <td>
-            <i class="fas fa-edit fa-lg text-info me-3"></i>
-            <i class="fas fa-trash-alt fa-lg text-danger"></i>
-          </td>
-        </tr>
-        <tr class="align-middle">
-          <th scope="row">423</th>
-          <td>Pyroar</td>
-          <td>
-            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/668.png" alt="" width="70" height="70px">
-          </td>
-          <td>68</td>
-          <td>32</td>
+          <td>{{ pokemon.type }}</td>
+          <td>{{ pokemon.attack | number}}</td>
+          <td>{{ pokemon["defense"] | number}}</td>
           <td>
             <i class="fas fa-edit fa-lg text-info me-3"></i>
             <i class="fas fa-trash-alt fa-lg text-danger"></i>

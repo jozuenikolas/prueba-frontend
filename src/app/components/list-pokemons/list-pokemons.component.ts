@@ -22,9 +22,14 @@ export class ListPokemonsComponent implements OnInit {
     this._pokemonService.getPokemons().subscribe((data) =>{
       this.pokemons = [];
       data.forEach((element:any)=>{
-
-        console.log("Elements:", element)
-
+        this.pokemons.push({
+          id: element["id"],
+          name: element["name"],
+          image: element["image"],
+          type: element["type"],
+          attack: element["attack"],
+          defense: element["defense"]
+        })
       })
     })
   }
