@@ -12,6 +12,7 @@
 
           <form class="mt-4">
 
+            <!--Input Nombre-->
             <div class="row">
               <div class="col">
                 <input
@@ -24,6 +25,7 @@
               </div>
             </div>
 
+            <!--Input Imagen -Tipo-->
             <div class="row mt-4">
               <div class="col">
                 <input
@@ -45,84 +47,37 @@
               </div>
             </div>
 
-
+            <!--Ataque-->
             <div class="row mt-4">
-
               <div class="col-md-2 text-end">
                 <label for="inputAttack">Ataque:</label>
               </div>
-
               <div class="col-md-9">
                 <input id="inputAttack" type="range" value="25" min="0" max="100"
                        oninput=""
                        class="form-range">
               </div>
-
               <div class="col-md-1">
                 <output>25</output>
               </div>
-
             </div>
 
+            <!--Defensa-->
             <div class="row mt-4">
-
               <div class="col-md-2 text-end">
                 <label for="inputDefense">Defensa:</label>
               </div>
-
               <div class="col-md-9">
                 <input id="inputDefense" type="range" value="75" min="0" max="100"
                        oninput=""
                        class="form-range">
               </div>
-
               <div class="col-md-1">
                 <output>75</output>
               </div>
-
             </div>
 
-           <!-- <div class="row">
-              <div class="col">
-                <div class="form-group">
-                  <label for="inputName" >Nombre</label>
-                  <input
-                    id="inputName"
-                    type="text"
-                    class="form-control"
-                    placeholder="Nombre"
-                    formControlName="nombre"
-                  />
-                </div>
-
-              </div>
-              <div class="col">
-                <input
-                  type="text"
-                  class="form-control form-control-lg"
-                  placeholder="Apellido"
-                  formControlName="apellido"
-                />
-              </div>
-            </div>
-            <input
-              type="text"
-              class="form-control form-control-lg mt-3"
-              placeholder="Documento"
-              formControlName="documento"
-            />
-            <input
-              type="number"
-              class="form-control form-control-lg mt-3"
-              placeholder="Salario"
-              formControlName="salario"
-            />
-
-            <label for="inputAttack" class="form-label">Example range</label>
-            <input type="range" value="24" min="0" max="100" oninput="this.nextElementSibling.value = this.value " class="form-range" id="inputAttack" aria-describedby="emailHelp" placeholder="Enter email">
-            <output>24</output>
--->
-
+            <!--Botones-->
             <div class="row mt-3">
               <div class="col-md-6 text-end">
                 <button
@@ -138,8 +93,6 @@
                   Cancelar
                 </button>
               </div>
-
-
             </div>
           </form>
         </div>
