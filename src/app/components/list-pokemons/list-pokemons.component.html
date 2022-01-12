@@ -1,1 +1,69 @@
-<p>list-pokemons works!</p>
+<div class="container mt-4">
+
+  <div class="card">
+    <div class="card-header">
+      <span class="h5 fw-bold">Listado de Pokemons</span>
+    </div>
+
+    <div class="card-body">
+
+      <input class="align-middle" type="text" placeholder="Buscar">
+
+      <button
+        style="background-color: #FE4A49;"
+        class="btn  float-end mb-3 fw-bold"
+        routerLink="/create-pokemon">
+        <i class="fas fa-plus"></i>
+        Nuevo
+      </button>
+
+      <table class="table table-warning table-striped mt-4">
+        <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Imagen</th>
+          <th scope="col">Ataque</th>
+          <th scope="col">Defensa</th>
+          <th scope="col">Acciones</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="align-middle">
+          <th scope="row">409</th>
+          <td>Bulbasaur</td>
+          <td>
+            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png" alt="" width="70" height="70px">
+          </td>
+          <td>48</td>
+          <td>53</td>
+          <td>
+            <i class="fas fa-edit fa-lg text-info me-3"></i>
+            <i class="fas fa-trash-alt fa-lg text-danger"></i>
+          </td>
+        </tr>
+        <tr class="align-middle">
+          <th scope="row">423</th>
+          <td>Pyroar</td>
+          <td>
+            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/668.png" alt="" width="70" height="70px">
+          </td>
+          <td>68</td>
+          <td>32</td>
+          <td>
+            <i class="fas fa-edit fa-lg text-info me-3"></i>
+            <i class="fas fa-trash-alt fa-lg text-danger"></i>
+          </td>
+        </tr>
+
+        </tbody>
+      </table>
+
+    </div>
+
+  </div>
+
+
+</div>
+
+
