@@ -2,15 +2,20 @@
   <div class="row pt-4">
     <div class="col-lg-6 offset-lg-3">
       <div class="card">
-        <div class="card-body">
-          <h3 class="text-center">
-            <!--{{ titulo }} Empleado-->
-            Agregar Pokemon
+        <div class="card-body text-center">
+          <h3 class="text-center">{{ title }} Pokemon</h3>
 
-          </h3>
+          <div class="row text-center">
+            <div class="col-md-12">
+              <span *ngIf="submited && pokemonForm.invalid"
+                    class="badge bg-danger">ERROR - VUELVA A INTENTARLO</span>
+            </div>
+          </div>
 
 
-          <form class="mt-4">
+          <form class="mt-4"
+                [formGroup]="pokemonForm"
+                (ngSubmit)="addOrUpdatePokemon()">
 
             <!--Input Nombre-->
             <div class="row">
@@ -20,7 +25,7 @@
                   type="text"
                   class="form-control form-control-lg"
                   placeholder="Nombre"
-                  formControlName="nombre"
+                  formControlName="name"
                 />
               </div>
             </div>
@@ -33,7 +38,7 @@
                   type="text"
                   class="form-control form-control-lg"
                   placeholder="Imagen"
-                  formControlName="imagen"
+                  formControlName="image"
                 />
               </div>
               <div class="col">
@@ -42,7 +47,7 @@
                   type="text"
                   class="form-control form-control-lg"
                   placeholder="Tipo"
-                  formControlName="tipo"
+                  formControlName="type"
                 />
               </div>
             </div>
@@ -53,12 +58,13 @@
                 <label for="inputAttack">Ataque:</label>
               </div>
               <div class="col-md-9">
-                <input id="inputAttack" type="range" value="25" min="0" max="100"
-                       oninput=""
+                <input id="inputAttack" type="range" value="{{ attack }}" min="0" max="100"
+                       (input)="onInputAttack($event)"
+                       formControlName="attack"
                        class="form-range">
               </div>
               <div class="col-md-1">
-                <output>25</output>
+                <output>{{ attack }}</output>
               </div>
             </div>
 
@@ -68,12 +74,13 @@
                 <label for="inputDefense">Defensa:</label>
               </div>
               <div class="col-md-9">
-                <input id="inputDefense" type="range" value="75" min="0" max="100"
-                       oninput=""
+                <input id="inputDefense" type="range" value="{{ defense }}" min="0" max="100"
+                       (input)="onInputDefense($event)"
+                       formControlName="defense"
                        class="form-range">
               </div>
               <div class="col-md-1">
-                <output>75</output>
+                <output>{{ defense }}</output>
               </div>
             </div>
 
@@ -83,7 +90,8 @@
                 <button
                   class=""
                   style="background-color: #FE4A49;"
-                  type="submit" class="btn btn-lg fw-bold">Agregar</button>
+                  type="submit" class="btn btn-lg fw-bold">{{ title }}
+                </button>
               </div>
               <div class="col-md-6 text-start">
                 <button

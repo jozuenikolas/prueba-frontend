@@ -7,7 +7,7 @@
 
     <div class="card-body">
 
-      <input class="align-middle" type="text" placeholder="Buscar">
+      <input class="align-middle" type="text" placeholder="Buscar" value="{{inputValue}}" (input)="updatesPokemons($event)">
 
       <button
         style="background-color: #FE4A49;"
@@ -40,8 +40,15 @@
           <td>{{ pokemon.attack | number}}</td>
           <td>{{ pokemon["defense"] | number}}</td>
           <td>
-            <i class="fas fa-edit fa-lg text-info me-3"></i>
-            <i class="fas fa-trash-alt fa-lg text-danger"></i>
+            <!--Editar Pokemon-->
+            <i class="fas fa-edit fa-lg text-info me-3"
+               [routerLink]="['/edit-pokemon/', pokemon.id]"></i>
+
+            <!--Eliminar Pokemon-->
+            <a (click)="deletePokemon($event, pokemon.id)">
+              <i  class="fas fa-trash-alt fa-lg text-danger" ></i>
+            </a>
+
           </td>
         </tr>
 

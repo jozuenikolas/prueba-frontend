@@ -4,7 +4,7 @@ import {ListPokemonsComponent} from "./components/list-pokemons/list-pokemons.co
 import {CreatePokemonComponent} from "./components/create-pokemon/create-pokemon.component";
 
 const routes: Routes = [
-  {path:'', redirectTo: 'list-empleados', pathMatch: 'full'},
+  {path:'', redirectTo: 'list-pokemons', pathMatch: 'full'},
   {path: 'list-pokemons', component: ListPokemonsComponent},
   {path:'create-pokemon', component: CreatePokemonComponent},
   {path:'edit-pokemon/:id', component: CreatePokemonComponent},
